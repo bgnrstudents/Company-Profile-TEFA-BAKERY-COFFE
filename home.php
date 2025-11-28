@@ -132,17 +132,17 @@
     <div class="container">
       <h3 class="text-center text-program mb-5">PROGRAM</h3>
       <div class="d-lg-flex justify-content-center gap-4 gap-lg-5">
-        <a href="#" class="text-decoration-none">
+        <a href="kunjungan.php" class="text-decoration-none">
           <div class="img-program-1 mx-auto mb-4 mb-lg-0">
             <h3>Kunjungan</h3>
           </div>
         </a>
-        <a href="#" class="text-decoration-none">
+        <a href="magang.php" class="text-decoration-none">
           <div class="img-program-2 mx-auto mb-4 mb-lg-0">
             <h3>Magang</h3>
           </div>
         </a>
-        <a href="#" class="text-decoration-none">
+        <a href="catering.php" class="text-decoration-none">
           <div class="img-program-3 mx-auto mb-4 mb-lg-0">
             <h3>Catering</h3>
           </div>
@@ -152,7 +152,7 @@
   </section>
   <!-- END PROGRAM -->
   <!-- ULASAN -->
-  <section class="ulasan py-5">
+  <section class="ulasan py-5" id="ulasan">
     <div class="container">
       <h2 class="text-center mb-5 h2-ulasan">RATING & ULASAN</h2>
       <div class="row justify-content-center g-4">

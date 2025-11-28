@@ -42,18 +42,18 @@
                         Program
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><a class="dropdown-item" href="#">Kunjungan</a></li>
-                        <li><a class="dropdown-item" href="#">Magang</a></li>
-                        <li><a class="dropdown-item" href="#">Gathering</a></li>
+                        <li><a class="dropdown-item" href="kunjungan.php">Kunjungan</a></li>
+                        <li><a class="dropdown-item" href="magang.php">Magang</a></li>
+                        <li><a class="dropdown-item" href="catering.php">Gathering</a></li>
                     </ul>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ulasan</a>
+                    <a class="nav-link" href="#ulasan">Ulasan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#footer">Contact Us</a>
                 </li>
 
 

@@ -1,4 +1,4 @@
-<footer class="bg-dark py-5 position-relative">
+<footer class="bg-dark py-5 position-relative" id="footer">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-10 col-12 ">
