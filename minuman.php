@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Hello, world!</title>
+
+<body>
+  <!-- Navbar -->
+  <?php include 'includes/navbar.php'; ?>
+  <div class="hero-minuman">
+    <div class="mid-plane"></div>
+    <div class="content p-5">
+      <h1 class="text-makanan">MENU MINUMAN</h1>
+    </div>
+  </div>
+
+
+  <!-- Minuman panas -->
+  <section id="aneka" class="py-5 makanan-section">
+    <h3 class="section-title mb-4 ms-5 ">Minuman Panas</h3>
+    <div class="aneka-wrap mt-2 container">
+      <button class="scroll-control scroll-left" aria-label="scroll left" id="leftBtn" style="display:none">
+        <span class="control-btn"><i class="bi bi-chevron-left fs-4"></i></span>
+               </button>
+
+      <div class="aneka-scroll" id="anekaScroll">
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/hot cappucino.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">HOT CAPPUCINO</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/kopi tubruk.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">KOPI TUBRUK</div>
+              <div class="product-sub">
+                <div class="price">Rp8000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/kopi susu panas.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">KOPI SUSU PANAS</div>
+              <div class="product-sub">
+                <div class="price">Rp12.500</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/americano.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">AMERICANO</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/kopi filter.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">KOPI FILTER</div>
+              <div class="product-sub">
+                <div class="price">Rp8000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/espresso double.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ESPRESSO DOUBLE</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/espresso single.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ESPRESSO SINGLE</div>
+              <div class="product-sub">
+                <div class="price">Rp8000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/milk tea.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">MILK TEA</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/Thai tea.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">THAI TEA</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/Lemon tea.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">LEMON TEA</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/lychee tea.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">LYCHEE TEA</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/hot chocolate.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">HOT CHOCOLATE</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/honey lemon.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">HONEY LEMON</div>
+              <div class="product-sub">
+                <div class="price">Rp12.500</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/teh hangat.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">TEH HANGAT</div>
+              <div class="product-sub">
+                <div class="price">Rp5000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/susu hangat.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">SUSU HANGAT</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+  </section>
+
+  <!--Minuman Dingin-->
+  <section id="aneka" class="minuman-section py-5">
+    <h3 class="section-title mb-4 ms-5">Minuman Dingin</h3>
+    <div class="aneka-wrap mt-2 container">
+      <button class="scroll-control scroll-left" aria-label="scroll left" id="leftBtn" style="display:none">
+        <span class="control-btn"><i class="bi bi-chevron-left fs-4"></i></span>
+               </button>
+
+      <div class="aneka-scroll" id="anekaScroll">
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es cappucino.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES CAPPUCINO</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es chocolate.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES CHOCOLATE</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es kopi susu.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES KOPI SUSU</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es kopi soda.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES KOPI SODA</div>
+              <div class="product-sub">
+                <div class="price">Rp20.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/milk tea.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES MILK TEA</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es matchacino.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES MATCHACINO</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es kopi susu botol.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES KOPI SUSU BOTOL</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="img/es cendol.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES CENDOL</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es thai tea.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES THAI TEA</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es lemon tea.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES LEMON TEA</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es lychee.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES LYCHEE TEA</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es teh.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES TEH</div>
+              <div class="product-sub">
+                <div class="price">Rp10.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es honey lemon.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES HONEY LEMON</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es susu.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES SUSU</div>
+              <div class="product-sub">
+                <div class="price">Rp15.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+
+        <div class="aneka-item">
+          <div class="product-card">
+            <div class="product-inner"><img src="imgminuman/es soda gembira.png" alt="gambar"></div>
+            <div class="product-footer">
+              <div class="product-title">ES SODA GEMBIRA</div>
+              <div class="product-sub">
+                <div class="price">Rp20.000</div>
+                <button class="fav-btn not-active" aria-label="favorite"><i class="bi bi-heart-fill"></i></button>
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+  </section>
+
+    <!-- Footer -->
+  <?php include 'includes/footer.php'; ?>
+
+
+  <!-- SCRIPT JS BOSTRAPP -->
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

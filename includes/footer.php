@@ -1,0 +1,74 @@
+<footer class="bg-dark py-5 position-relative">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-10 col-12 ">
+                <div class="d-flex align-items-center gap-5">
+                    <div class="d-flex flex-column gap-3 ">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="img/logo sip.png" alt="Logo SIP" height="70" class="img-footer">
+                            <h3 class="text-white fw-bold mb-0">TEFA</h3>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="img/logo poliye.png" alt="Logo POLIJE" height="80">
+                            <h3 class="text-white fw-bold mb-0 ">POLIJE</h3>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <h3 class="text-white fw-bold mb-1">TEFA Bakery & Coffee - POLIJE</h3>
+                        <p class="text-white-50 small mb-0">
+                            Fresh Bakery & Coffee with Education Spirit
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-top mb-5 mt-5"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- CONTACT -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                <h5 class="text-white fw-bold mb-3 text-center">CONTACT</h5>
+                <ul class="list-unstyled text-white-50  text-lg-start text-sm-center">
+                    <li class="mb-2">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        RPVG+VRC, Lingkungan Panji, Tegalgede, Kec. Sumbersari, Kabupaten Jember, Jawa Timur 68124
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-whatsapp"></i>
+                        082333497811
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-instagram"></i>
+                        @tefasippolije
+                    </li>
+                </ul>
+            </div> <!-- TUTUP CONTACT -->
+
+            <!-- OPEN HOURS -->
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <h5 class="text-white fw-bold mb-3 text-center">OPEN HOURS</h5>
+                <ul class="list-unstyled text-white-50  text-center">
+                    <li class="mb-2">Mon-Fri: 08:00-17:00</li>
+                    <li class="mb-2">Sat-Sun: 09:00-15:00</li>
+                </ul>
+            </div> <!-- TUTUP OPEN HOURS -->
+
+            <!-- QUICK LINK -->
+            <div class="col-lg-3 col-md-6 col-12 mb-lg-0">
+                <h5 class="text-white fw-bold mb-3 text-center">QUICK LINK</h5>
+                <ul class="list-unstyled  text-center">
+                    <li class="mb-2"><a href="#" class=" text-decoration-none">HOME</a></li>
+                    <li class="mb-2"><a href="#" class=" text-decoration-none">Menu</a></li>
+                    <li class="mb-2"><a href="#" class=" text-decoration-none">PROGRAM</a></li>
+                    <li class="mb-2"><a href="#" class=" text-decoration-none">ULASAN</a></li>
+                    <li class="mb-2"><a href="#" class=" text-decoration-none">CONTACT US</a></li>
+                </ul>
+            </div> <!-- TUTUP QUICK LINK -->
+
+        </div>
+        <div class="text-center text-white-50 small pt-3 border-secondary">
+            © 2025 TEFA Bakery & Coffee - POLIJE. All Rights Reserved.
+        </div>
+    </div>
+</footer>
