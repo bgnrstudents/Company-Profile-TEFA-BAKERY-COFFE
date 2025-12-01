@@ -350,9 +350,9 @@ footer a:hover {
   top: 5%;
   margin: 0;
   pointer-events: none;
-  -webkit-text-stroke-width: 0.8px; /* Ketebalan garis luar */
+  -webkit-text-stroke-width: 0.8px; 
   -webkit-text-stroke-color: rgb(137, 98, 0);
-  text-shadow: 4px 4px 4px #ffffff;
+  /* text-shadow: 4px 4px 4px #ffffff; */
 }
 
 .hero-title span {
@@ -497,6 +497,7 @@ footer a:hover {
 .img-visi,
 .img-misi {
   filter: drop-shadow(5px 0px 20px rgba(0, 0, 0, 0.5));
+  /* margin-right: 50%; */
 }
 .text-visi,
 .text-misi {
@@ -508,8 +509,24 @@ footer a:hover {
 .text-p-misi {
   color: var(--color-footer);
   text-align: justify;
-  font-weight: 300;
+  font-weight: 400;
 }
+
+/* FIX VISI-MISI AGAR GA MEPET PINGGIR DI MOBILE (TANPA UBAH HTML) */
+@media (max-width: 578px) {
+  /* Kiri: VISI */
+  .img-visi-misi .text-visi,
+  .img-visi-misi {
+    text-align: center;
+  }
+  .img-visi-misi .text-p-misi,
+  .img-visi-misi .text-p-visi {
+    padding: 0 2rem;
+    text-decoration: none;
+    list-style-position: inside;
+  }
+}
+
 /* END VISI MISI */
 /* MENU */
 .menusection {
@@ -654,6 +671,7 @@ footer a:hover {
 .form-ulasan {
   background: var(--color-navbar);
   border-radius: 10px;
+  max-height: 500px;
 }
 .star {
   font-size: 2rem;
@@ -688,16 +706,43 @@ footer a:hover {
 }
 .ulasan-container {
   background: var(--color-footer);
+  max-height: 485px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-footer) var(--color-navbar); 
 }
 .rate-output {
   background: var(--color-navbar);
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .stars {
   color: #ffc107;
 }
-.review-body, .username {
+/* STAR  ULASAN */
+.rating-stars {
+  font-size: 2.8rem;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.star {
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.star:hover {
+  transform: scale(1.3);
+}
+
+.star.active {
+  color: #ffc107 !important;
+}
+
+.review-body,
+.username {
   color: var(--color-footer);
+  font-size: 12px;
 }
 /* END ULASAN */
 /* MAKANAN */
@@ -1054,36 +1099,3 @@ footer a:hover {
   line-height: 1.7;
 }
 /* END MAGANG */
-/* Minimal Smooth Transition */
-body {
-  animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.rating-stars {
-    font-size: 2.8rem;
-    gap: 12px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.star {
-    transition: all 0.3s ease;
-    color: #ddd;
-}
-
-.star:hover {
-    transform: scale(1.3);
-}
-
-.star.active {
-    color: #ffc107 !important;
-}

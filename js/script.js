@@ -156,7 +156,6 @@ document.querySelectorAll(".fav-btn").forEach((btn) => {
   });
 });
 // END MINUMAN
-// ===============================================
 // NAVBAR ACTIVE STATE – FINAL & 100% JALAN
 function setActiveNavbar() {
   const currentPage = window.location.pathname.split("/").pop() || "home.html";
@@ -223,11 +222,6 @@ function handleScroll() {
       const ulasan = document.querySelector('.nav-link[href$="#ulasan"], .nav-link[href="#ulasan"]');
       if (ulasan) ulasan.classList.add("active");
     }
-    // Default: Home aktif
-    // else if (currentPage === "home.html") {
-    //   const home = document.querySelector('.nav-link[href="home.html"]');
-    //   if (home) home.classList.add("active");
-    // }
   }, 50);
 }
 
@@ -251,7 +245,7 @@ document.addEventListener("DOMContentLoaded", runWhenReady);
 window.addEventListener("hashchange", setActiveNavbar);
 
 
-
+// ULASAN FORM → WHATSAPP (STAR)
 document.addEventListener("DOMContentLoaded", function () {
     const stars = document.querySelectorAll('.star');
     const ratingValue = document.getElementById('ratingValue');
@@ -270,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     s.classList.add('active');
                 } else {
                     s.textContent = '☆';
-                    s.style.color = '#ddd';
+                    s.style.color = '#524235';
                     s.classList.remove('active');
                 }
             });
