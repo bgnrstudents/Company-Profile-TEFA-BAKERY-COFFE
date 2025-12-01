@@ -252,3 +252,66 @@ window.addEventListener("hashchange", setActiveNavbar);
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const stars = document.querySelectorAll('.star');
+    const ratingValue = document.getElementById('ratingValue');
+    let selectedRating = 0;
+
+    // Klik bintang → ubah jadi kuning & simpan nilai
+    stars.forEach(star => {
+        star.addEventListener('click', function () {
+            selectedRating = this.getAttribute('data-value');
+            ratingValue.value = selectedRating;
+
+            stars.forEach(s => {
+                if (parseInt(s.getAttribute('data-value')) <= selectedRating) {
+                    s.textContent = '★';
+                    s.style.color = '#ffc107';
+                    s.classList.add('active');
+                } else {
+                    s.textContent = '☆';
+                    s.style.color = '#ddd';
+                    s.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    // Submit form → kirim ke WA
+    document.getElementById('reviewForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // biar ga reload
+
+        const nama = document.getElementById('nama').value.trim();
+        const ulasan = document.getElementById('isi-ulasan').value.trim();
+        const rating = ratingValue.value;
+
+        // Validasi
+        if (!nama || !ulasan || rating === "0") {
+            alert("Bro isi nama, ulasan, dan kasih bintang dulu dong 😭");
+            return;
+        }
+
+        // Format pesan rapi ke WA
+        const pesanWA = `Halo Admin TEFA Bakery Coffee!%0A%0A`
+                      + `Ada ulasan baru nih ⭐%0A%0A`
+                      + `Nama: *${nama}*%0A`
+                      + `Rating: *${rating} / 5* ${'★'.repeat(rating)}${'☆'.repeat(5-rating)}%0A%0A`
+                      + `Ulasan:%0A${ulasan}%0A%0A`
+                      + `Terima kasih!`;
+
+        // Buka WhatsApp
+        window.open(`https://wa.me/6285850030268?text=${pesanWA}`, '_blank');
+
+        // Reset form + bintang
+        this.reset();
+        ratingValue.value = "0";
+        selectedRating = 0;
+        stars.forEach(s => {
+            s.textContent = '☆';
+            s.style.color = '#ddd';
+            s.classList.remove('active');
+        });
+
+        alert("Ulasan berhasil dikirim ke WhatsApp! Makasih banyak bro 🙌");
+    });
+});
