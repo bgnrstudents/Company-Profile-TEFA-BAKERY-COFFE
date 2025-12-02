@@ -15,6 +15,10 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
+
+    <!-- ANIMATION PAGE-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Bakery & Coffe</title>
 </head>
 
@@ -25,8 +29,8 @@
 
             <!-- TEXT -->
             <div class="col-lg-8 col-12">
-                <h1 class="h1-program">PROGRAM MAGANG</h1>
-                <p class="p-program">
+                <h1 class="h1-program" data-aos="fade-up" data-aos-duration="1000">PROGRAM MAGANG</h1>
+                <p class="p-program" data-aos="fade-up" data-aos-duration="1000">
                     Program magang di TEFA Bakery & Coffe adalah Praktik Kerja Lapangan (PKL) yang bertujuan
                     mengembangkan pengetahuan dan keterampilan mahasiswa di dunia kerja industri pangan, mulai dari
                     proses produksi hingga pengemasan produk roti dan kopi, serta meningkatkan jiwa kewirausahaan
@@ -36,7 +40,7 @@
             </div>
 
             <!-- QR CARD -->
-            <div class="col-lg-3 qr-align col-7 m-auto">
+            <div class="col-lg-3 qr-align col-7 m-auto"  data-aos="fade-up" data-aos-duration="1000">
                 <div class="qr-card d-flex flex-column ">
                     <div class="qr-box p-3">
                         <img src="imgmagang/QR.png" alt="QR Code" class="img-fluid">
@@ -49,13 +53,13 @@
         <!-- THUMBNAIL ROW -->
         <div class="row mt-4 g-3  img-program">
             <div class="col-md-4">
-                <img src="imgmagang/foto-magang1.jpeg" class="thumb-img">
+                <img src="imgmagang/foto-magang1.jpeg" class="thumb-img"  data-aos="fade-up" data-aos-duration="1000">
             </div>
             <div class="col-md-4">
-                <img src="imgmagang/foto-magang3.png" class="thumb-img">
+                <img src="imgmagang/foto-magang3.png" class="thumb-img"  data-aos="fade-up" data-aos-duration="1000">
             </div>
             <div class="col-md-4">
-                <img src="imgmagang/foto-magang2.jpeg" class="thumb-img">
+                <img src="imgmagang/foto-magang2.jpeg" class="thumb-img"  data-aos="fade-up" data-aos-duration="1000">
             </div>
         </div>
     </div>
@@ -67,6 +71,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+        }); 
+    </script>
 </body>
 
 </html>

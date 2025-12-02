@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- ANIMATION PAGE-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Bakery & Coffe</title>
 </head>
 
@@ -23,8 +26,8 @@
 
       <!-- TEXT -->
       <div class="col-lg-8 col-12">
-        <h1 class=" h1-program">PROGRAM CATERING</h1>
-        <p class="p-program">
+        <h1 class=" h1-program" data-aos="fade-up" data-aos-duration="1000">PROGRAM CATERING</h1>
+        <p class="p-program" data-aos="fade-up" data-aos-duration="1000">
           Program Catering Bakery & Coffee Polije adalah layanan dari TEFA ini yang fokus pada penyediaan,
           penyiapan, dan pengantaran berbagai jenis roti serta makanan olahan roti untuk acara atau kebutuhan tertentu.
           Usaha ini biasanya mencakup perencanaan menu, produksi roti, dan penyajian di lokasi acara, seperti pesta,
@@ -33,7 +36,7 @@
       </div>
 
       <!-- QR CARD -->
-      <div class="col-lg-3 qr-align col-7 m-auto ">
+      <div class="col-lg-3 qr-align col-7 m-auto " data-aos="fade-up" data-aos-duration="1000">
         <div class="qr-card d-flex flex-column ">
           <div class="qr-box p-3">
             <img src="imgmagang/qr catering.jpeg"alt="QR Code" class="img-fluid">
@@ -46,13 +49,13 @@
     <!-- THUMBNAIL ROW -->
     <div class="row mt-4 g-3 mb-5 img-program">
       <div class="col-md-4">
-        <img src="gambar/catering 1.jpeg" class="thumb-img">
+        <img src="gambar/catering 1.jpeg" class="thumb-img" data-aos="fade-up" data-aos-duration="1000">
       </div>
       <div class="col-md-4">
-        <img src="gambar/catering 2.jpeg" class="thumb-img">
+        <img src="gambar/catering 2.jpeg" class="thumb-img" data-aos="fade-up" data-aos-duration="1000">
       </div>
       <div class="col-md-4">
-        <img src="gambar/catering 3.jpeg" class="thumb-img">
+        <img src="gambar/catering 3.jpeg" class="thumb-img" data-aos="fade-up" data-aos-duration="1000">
       </div>
     </div>
 
@@ -64,6 +67,13 @@
   <!-- SCRIPT JS BOSTRAPP -->
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000,
+    }); 
+  </script>
 </body>
 
 </html>

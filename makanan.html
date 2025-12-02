@@ -14,6 +14,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- ANIMATION PAGE-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Bakery & Coffe</title>
 </head>
 
@@ -21,18 +24,18 @@
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
     <!--Hero Section-->
-    <div class="hero-makanan" id="makanan">
+    <div class="hero-makanan text-center" id="makanan" >
         <div class="mid-plane"></div>
-        <div class="content p-5">
-            <h1 class="text-makanan">MENU MAKANAN</h1>
+        <div class="content p-5 text-center">
+            <h1 class="text-makanan text-center">MENU MAKANAN</h1>
         </div>
     </div>
 
     <!-- Best Seller (grid) -->
-    <section class="py-5 best-seller">
+    <section class="py-5 best-seller"  >
         <div class="container">
-            <h3 class="section-title ms-lg-4 ">BEST SELLER</h3>
-            <div class="row ">
+            <h3 class="section-title ms-lg-4 " data-aos="fade-up"  data-aos-duration="1000">BEST SELLER</h3>
+            <div class="row " data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-6 col-md-4 col-lg-3 mb-sm-4">
                     <div class="product-card">
                         <div class="product-inner"><img src="imgmakanan/roti sobek.png" alt="Roti Sobek"></div>
@@ -81,13 +84,13 @@
     <!-- Aneka Roti - horizontal scroll -->
     <section id="aneka" class="py-5 bg-white">
         <div class="container">
-            <h3 class="section-title  mb-4">Aneka Roti</h3>
+            <h3 class="section-title  mb-4" data-aos="fade-up" data-aos-duration="1000">Aneka Roti</h3>
             <div class="aneka-wrap mt-2">
                 <button class="scroll-control scroll-left" aria-label="scroll left" id="leftBtn" style="display:none">
                     <span class="control-btn"><i class="bi bi-chevron-left fs-4"></i></span>
                 </button>
 
-                <div class="aneka-scroll" id="anekaScroll">
+                <div class="aneka-scroll" id="anekaScroll" data-aos="fade-up" data-aos-duration="1000">
                     <div class="aneka-item">
                         <div class="product-card">
                             <div class="product-inner"><img src="imgmakanan/roti pizza.png" alt="Roti Pisang Coklat">
@@ -300,10 +303,10 @@
     </section>
 
     <!-- Roti Kering -->
-    <section class="py-5 section-roti-kering">
-        <div class="container ">
-            <h3 class="section-title  mb-4">Roti Kering</h3>
-            <div class="row mx-sm-auto ">
+    <section class="py-5 section-roti-kering" >
+        <div class="container " >
+            <h3 class="section-title  mb-4" data-aos="fade-up" data-aos-duration="1000">Roti Kering</h3>
+            <div class="row mx-sm-auto " data-aos="fade-up" data-aos-duration="1000">
                 <div class="col-6  col-md-4 col-lg-3 mb-sm-3">
                     <div class="product-card">
                         <div class="product-inner"><img src="imgmakanan/bagelen.png" alt="Roti Bagelen"></div>
@@ -355,6 +358,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+        }); 
+    </script>
 </body>
 
 </html>
