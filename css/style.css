@@ -1130,3 +1130,28 @@ footer a:hover {
   line-height: 1.7;
 }
 /* END MAGANG */
+/* CONTROL ANIMATION AOM */
+@media (max-width: 767px) {
+
+  [data-aos] {
+    transform: none !important;
+    transition-property: opacity, transform !important;
+  }
+
+
+  [data-aos="fade-left"] {   transform: translate3d(0px, 0, 0) !important; }
+  [data-aos="fade-right"] {  transform: translate3d(0, 0, 0) !important; }
+  [data-aos="fade-up"] {     transform: translate3d(0, 0, 0) !important; }
+  [data-aos="fade-down"] {   transform: translate3d(0, 0, 0) !important; }
+  [data-aos="zoom-in"] {     transform: scale(0.95) !important; }
+
+  [data-aos].aos-animate {
+    transform: translate3d(0,0,0) !important;
+    transform: scale(1) !important;
+  }
+
+  .hero-left,
+  .floating-images {
+    overflow: hidden !important;
+  }
+}
