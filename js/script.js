@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return; // Default smooth scroll behavior
     }
     
-    const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
     // Links with page + hash (home.html#ulasan)
     if (href.includes('#')) {
@@ -158,7 +158,7 @@ document.querySelectorAll(".fav-btn").forEach((btn) => {
 // END MINUMAN
 // NAVBAR ACTIVE STATE – FINAL & 100% JALAN
 function setActiveNavbar() {
-  const currentPage = window.location.pathname.split("/").pop() || "home.html";
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const currentHash = window.location.hash;
 
   // Bersihin semua active
@@ -179,17 +179,17 @@ function setActiveNavbar() {
   });
 
   // 2. Kalau di home.html & ada hash
-  if (currentPage === "home.html") {
+  if (currentPage === "index.html") {
     if (currentHash === "#ulasan") {
-      const link = document.querySelector('.nav-link[href="home.html#ulasan"], .nav-link[href="#ulasan"]');
+      const link = document.querySelector('.nav-link[href="index.html#ulasan"], .nav-link[href="#ulasan"]');
       if (link) link.classList.add("active");
       activeSet = true;
     } else if (currentHash === "#footer") {
-      const link = document.querySelector('.nav-link[href="home.html#footer"], .nav-link[href="#footer"]');
+      const link = document.querySelector('.nav-link[href="index.html#footer"], .nav-link[href="#footer"]');
       if (link) link.classList.add("active");
       activeSet = true;
     } else if (!currentHash) {
-      const home = document.querySelector('.nav-link[href="home.html"]');
+      const home = document.querySelector('.nav-link[href="index.html"]');
       if (home) home.classList.add("active");
     }
   }
@@ -200,7 +200,7 @@ let scrollTimeout;
 function handleScroll() {
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(() => {
-    const currentPage = window.location.pathname.split("/").pop() || "home.html";
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
     const scrollPos = window.scrollY + window.innerHeight / 2;
 
     // Ambil section ulasan & footer
