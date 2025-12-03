@@ -15,91 +15,80 @@ Promise.all([
 });
 // END Navbar DAN FOOTER
 // TRANSITION LINK
-document.addEventListener('DOMContentLoaded', function() {
-  document.body.style.opacity = '1';
-  
-  document.addEventListener('click', function(e) {
-    const link = e.target.closest('a');
-    if (!link) return;
-    
-    const href = link.getAttribute('href');
-    
-    // Skip conditions
-    if (!href || 
-        link.classList.contains('dropdown-toggle') ||
-        link.getAttribute('target') === '_blank' ||
-        (href.startsWith('http') && !href.includes(window.location.hostname))) {
-      return;
-    }
-    
-    // ⬇️ PENTING: Hash-only links (#footer, #ulasan) - biarkan browser handle
-    if (href.startsWith('#')) {
-      return; // Default smooth scroll behavior
-    }
-    
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    // Links with page + hash (home.html#ulasan)
-    if (href.includes('#')) {
-      const [page, hash] = href.split('#');
-      
-      // Same page - let browser scroll
-      if (page === currentPage) {
-        return;
-      }
-      
-      // Different page - apply transition
-      e.preventDefault();
-      document.body.style.opacity = '0';
-      document.body.style.transition = 'opacity 0.25s ease';
-      
-      setTimeout(() => {
-        window.location.href = href;
-      }, 250);
-      return;
-    }
-    
-    // Regular page links - apply transition
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.4s ease';
+  requestAnimationFrame(() => document.body.style.opacity = '1');
+});
+
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a');
+  if (!link) return;
+
+  const href = link.getAttribute('href');
+  if (!href ||
+      link.classList.contains('dropdown-toggle') ||
+      link.getAttribute('target') === '_blank' ||
+      href.startsWith('#') ||
+      (href.startsWith('http') && !href.includes(location.hostname))) {
+    return;
+  }
+
+  e.preventDefault();
+
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.3s ease';
+
+  setTimeout(() => {
+    history.pushState(null, '', href);
+    window.location.href = href;   
+  }, 300);
+});
+
+
+window.addEventListener('popstate', () => {
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.3s ease';
+
+  setTimeout(() => {
+    window.location.reload();  
+  }, 300);
+});
+
+
+window.addEventListener('pageshow', (e) => {
+  if (e.persisted) {  
     document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.25s ease';
-    
-    setTimeout(() => {
-      window.location.href = href;
-    }, 250);
-  });
-});
-
-// Auto scroll to hash after page load (untuk yang dari page lain)
-window.addEventListener('load', function() {
-  if (window.location.hash) {
-    setTimeout(() => {
-      const target = document.querySelector(window.location.hash);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 600);
+    requestAnimationFrame(() => {
+      document.body.style.opacity = '1';
+      document.body.style.transition = 'opacity 0.4s ease';
+    });
   }
 });
-
 // END TRANSITION LINK
-// MAKANAN
-// Toggle Favorite Button
+// LOVE ACTIVE 
 document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("fav-btn")) {
-    e.preventDefault();
-    e.target.classList.toggle("not-active");
+  const btn = e.target.closest(".fav-btn");
+  if (!btn) return;
 
-    e.target.animate(
-      [
-        { transform: "scale(0.9)" },
-        { transform: "scale(1.2)" },
-        { transform: "scale(1)" },
-      ],
-      { duration: 200, easing: "ease-out" }
-    );
-  }
+  e.preventDefault();
+
+  btn.classList.toggle("not-active");
+
+  btn.animate(
+    [
+      { transform: "scale(1)" },
+      { transform: "scale(0.85)" },
+      { transform: "scale(1.3)" },
+      { transform: "scale(1)" }
+    ],
+    {
+      duration: 350,
+      easing: "cubic-bezier(0.68, -0.55, 0.265, 1.55)" 
+    }
+  );
 });
+// END LOVE ACTIVE
 // END MAKANAN
 // HORIZONTAL SCROLL ANEKA
 const anekaScroll = document.getElementById("anekaScroll");
@@ -142,33 +131,19 @@ window.addEventListener("scroll", () => {
 });
 
 
-document.querySelectorAll(".fav-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btn.classList.toggle("not-active");
-    btn.animate(
-      [
-        { transform: "scale(0.9)" },
-        { transform: "scale(1.15)" },
-        { transform: "scale(1)" },
-      ],
-      { duration: 220, easing: "ease-out" }
-    );
-  });
-});
 // END MINUMAN
 // NAVBAR ACTIVE STATE – FINAL & 100% JALAN
 function setActiveNavbar() {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const currentHash = window.location.hash;
 
-  // Bersihin semua active
+
   document.querySelectorAll(".navbar .nav-link, .dropdown-item").forEach(el => {
     el.classList.remove("active");
   });
 
   let activeSet = false;
 
-  // 1. DROPDOWN ITEM (makanan.html, dll)
   document.querySelectorAll(".dropdown-item").forEach(item => {
     if (item.getAttribute("href") === currentPage) {
       item.classList.add("active");
@@ -178,7 +153,7 @@ function setActiveNavbar() {
     }
   });
 
-  // 2. Kalau di home.html & ada hash
+
   if (currentPage === "index.html") {
     if (currentHash === "#ulasan") {
       const link = document.querySelector('.nav-link[href="index.html#ulasan"], .nav-link[href="#ulasan"]');
@@ -195,7 +170,7 @@ function setActiveNavbar() {
   }
 }
 
-// Scroll detection — jalan di SEMUA halaman
+
 let scrollTimeout;
 function handleScroll() {
   clearTimeout(scrollTimeout);
@@ -203,21 +178,21 @@ function handleScroll() {
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
     const scrollPos = window.scrollY + window.innerHeight / 2;
 
-    // Ambil section ulasan & footer
+    
     const ulasanSection = document.querySelector("#ulasan");
     const footerSection = document.querySelector("footer, #footer");
 
-    // Bersihin active nav-link dulu (dropdown item ga ikut dibersihin)
+
     document.querySelectorAll(".navbar .nav-link").forEach(link => {
       link.classList.remove("active");
     });
 
-    // Prioritas: Footer paling bawah
+ 
     if (footerSection && scrollPos > footerSection.offsetTop) {
       const contact = document.querySelector('.nav-link[href$="#footer"], .nav-link[href="#footer"]');
       if (contact) contact.classList.add("active");
     }
-    // Ulasan aktif kalau di tengah-tengah
+
     else if (ulasanSection && scrollPos > ulasanSection.offsetTop && scrollPos < ulasanSection.offsetTop + ulasanSection.offsetHeight) {
       const ulasan = document.querySelector('.nav-link[href$="#ulasan"], .nav-link[href="#ulasan"]');
       if (ulasan) ulasan.classList.add("active");
@@ -251,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const ratingValue = document.getElementById('ratingValue');
     let selectedRating = 0;
 
-    // Klik bintang → ubah jadi kuning & simpan nilai
+
     stars.forEach(star => {
         star.addEventListener('click', function () {
             selectedRating = this.getAttribute('data-value');
@@ -271,21 +246,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Submit form → kirim ke WA
+   
     document.getElementById('reviewForm').addEventListener('submit', function (e) {
-        e.preventDefault(); // biar ga reload
+        e.preventDefault();
 
         const nama = document.getElementById('nama').value.trim();
         const ulasan = document.getElementById('isi-ulasan').value.trim();
         const rating = ratingValue.value;
 
-        // Validasi
+   
         if (!nama || !ulasan || rating === "0") {
-            alert("Bro isi nama, ulasan, dan kasih bintang dulu dong 😭");
+            alert("Harap lengkapi semua bidang dan berikan rating sebelum mengirim ulasan.");
             return;
         }
 
-        // Format pesan rapi ke WA
+    
         const pesanWA = `Halo Admin TEFA Bakery Coffee!%0A%0A`
                       + `Ada ulasan baru nih ⭐%0A%0A`
                       + `Nama: *${nama}*%0A`
@@ -293,10 +268,10 @@ document.addEventListener("DOMContentLoaded", function () {
                       + `Ulasan:%0A${ulasan}%0A%0A`
                       + `Terima kasih!`;
 
-        // Buka WhatsApp
+
         window.open(`https://wa.me/6285850030268?text=${pesanWA}`, '_blank');
 
-        // Reset form + bintang
+
         this.reset();
         ratingValue.value = "0";
         selectedRating = 0;
@@ -306,6 +281,6 @@ document.addEventListener("DOMContentLoaded", function () {
             s.classList.remove('active');
         });
 
-        alert("Ulasan berhasil dikirim ke WhatsApp! Makasih banyak bro 🙌");
+        alert("Ulasan berhasil dikirim ke WhatsApp! Terima kasih");
     });
 });
